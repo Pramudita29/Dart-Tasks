@@ -4,8 +4,6 @@ void main() {
   String continueChoice;
  
   do {
-    // Display menu
-    print("========== MENU DRIVEN ==========");
     print("1. Add");
     print("2. Subtract");
     print("3. Multiply");
@@ -15,13 +13,11 @@ void main() {
     if (choice == null || choice < 1 || choice > 3) {
       print("Invalid choice. Please select a valid option from the menu.");
     } else {
-      // Input two numbers
       stdout.write("Enter the first number: ");
       int num1 = int.parse(stdin.readLineSync()!);
       stdout.write("Enter the second number: ");
       int num2 = int.parse(stdin.readLineSync()!);
  
-      // Perform the selected operation using switch-case
       switch (choice) {
         case 1:
           print("Result: ${num1 + num2}");
@@ -35,7 +31,6 @@ void main() {
       }
     }
  
-    // Ask if the user wants to continue
     stdout.write("Do you want to continue (Y/N)? ");
     continueChoice = stdin.readLineSync()!.toLowerCase();
  
